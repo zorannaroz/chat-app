@@ -1,0 +1,143 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App {
+  width: 375px;
+  height: 667px;
+  border: 16px solid #333;
+  border-radius: 36px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 20px;
+}
+.chat-app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-room-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.phone-header {
+  height: 30px;
+  background: #333;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.status-bar {
+  height: 8px;
+  width: 50px;
+  background: #666;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.phone-footer {
+  height: 30px;
+  background: #333;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media (orientation: portrait) {
+  .App {
+    width: 375px;
+    height: 667px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) {
+  .App {
+    width: 867px;
+    height: 575px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .chat-app {
+    height: calc(100% - 60px);
+  }
+}
+
+/* For high-DPI displays (Retina screens) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    font-size: 18px;
+  }
+
+  .App {
+    border-width: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .App {
+      width: 320px;
+      height: 568px;
+    }
+  }
+  .header h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    width: 280px;
+    height: 500px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .chat-app {
+    height: calc(100% - 40px);
+  }
+}

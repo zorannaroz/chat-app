@@ -1,0 +1,45 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  background: #f4f4f9;
+  border-left: 2px solid #ddd;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.message:nth-child(odd) {
+  background: #e1f5fe;
+}
+
+.message:nth-child(even) {
+  background: #fce4ec;
+}
+
+.text {
+  flex: 1;
+  margin-right: 10px;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #999;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
